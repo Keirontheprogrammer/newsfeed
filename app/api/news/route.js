@@ -7,7 +7,7 @@ const cache = {};
 
 export async function GET(request){
     const { searchParams } = new URL(request.url);
-    const topic = searchParams.get('topic') || 'word';
+    const topic = searchParams.get('topic') || 'world';
 
     //check if cached
     const cached = cache[topic];
@@ -15,7 +15,7 @@ export async function GET(request){
 
     if (cached && now - cached.fetchedAT < CACHE_DURATION) {
         console.log(`Cache for: ${topic}`)
-        return NextResponse.json({article:cached.data, fromCache: true});
+        return NextResponse.json({articles:cached.data, fromCache: true});
 
     }
 
