@@ -207,7 +207,7 @@ export default function Home() {
                        href={article.url}
                       target="_blank"
                       className="text-xs border border-gray-700 hover:border-gray-500 px-3 py-1 rounded-md transition"
-                       >Read </a>
+                       >Read 🗞️</a>
                        <button 
                           onClick={()=> handleSurmmarize(article)}
                           disabled={isSummarizing}
